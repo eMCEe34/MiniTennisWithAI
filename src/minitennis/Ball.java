@@ -9,10 +9,12 @@ public class Ball {
     int ya = 1;
     private Main game;
 
+    //Constructor that sets the game variable here to our Main class
     public Ball(Main game){
         this.game=game;
     }
 
+    //move function used for the ball's movement, game over, and collision
     void move(){
         if(x + xa < 0)
             xa = game.speed;
