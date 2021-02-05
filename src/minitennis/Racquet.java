@@ -4,12 +4,11 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
-
 public class Racquet {
-    private static final int Y = 230;
+    private static final int Y = 375;
     private static final int WIDTH = 60;
     private static final int HEIGHT = 10;
-    int x = 0;
+    int x = 200;
     int xa = 0;
     private Main game;
 
@@ -27,7 +26,7 @@ public class Racquet {
 
     //Function used to create the racquet sprite
     public void paint (Graphics2D g){
-        g.fillRect(x,Y,WIDTH,HEIGHT);
+        g.fillRect(x, Y,WIDTH,HEIGHT);
     }
 
     //Function is used to set the racquet speed to zero when a key is released

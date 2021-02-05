@@ -14,6 +14,8 @@ public class Main extends JPanel {
 	Ball ball = new Ball(this);
 	//Creates racquet object
 	Racquet racquet = new Racquet(this);
+	//Creates racquetAi object
+	RacquetAI racquetAi = new RacquetAI(this);
 	int speed = 1;
 
 	//Getter for speed and score (same value)
@@ -68,6 +70,7 @@ public class Main extends JPanel {
 		ball.paint(g2d);
 		//Calls the paint function on the racquet and passes in g2d
 		racquet.paint(g2d);
+		racquetAi.paint(g2d);
 
 		//Sets font color to gray
 		g2d.setColor(Color.GRAY);
@@ -94,7 +97,7 @@ public class Main extends JPanel {
 	    //The game object is placed inside the frame
 	    frame.add(game);
 	    //Size of the window(frame) is 300x300
-	    frame.setSize(300,300);
+	    frame.setSize(480,480);
 	    //The game window is visible
 	    frame.setVisible(true);
 	    //Able to close the game and stop all processes
