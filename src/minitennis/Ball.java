@@ -16,7 +16,7 @@ public class Ball {
     }
 
     //move function used for the ball's movement, game over, and collision
-    void move(){
+    public int move(){
         //If the ball hits the left wall, bounce to the right
         if(x + xa < 0)
             xa = game.speed;
@@ -38,6 +38,8 @@ public class Ball {
         //Sets movement direction and speed of the ball
         x=x+xa;
         y=y+ya;
+
+        return x;
     }
 
     //Function used to detect if the ball and racquet collide

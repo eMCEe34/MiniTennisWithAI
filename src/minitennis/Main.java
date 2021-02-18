@@ -54,6 +54,7 @@ public class Main extends JPanel {
 	private void move(){
 		ball.move();
 		racquet.move();
+		racquetAi.move(ball.move());
 	}
 
 	//Function used to create game sprites
