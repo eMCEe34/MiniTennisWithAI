@@ -34,6 +34,10 @@ public class Ball {
             ya = -game.speed;
             y = game.racquet.getTopY() - DIAMETER;
             game.speed++;
+        }else if(collisionAI()){
+            ya = game.speed;
+            y = game.racquetAi.getBottomY() - DIAMETER;
+            game.speed++;
         }
         //Sets movement direction and speed of the ball
         x=x+xa;
@@ -45,6 +49,10 @@ public class Ball {
     //Function used to detect if the ball and racquet collide
     private boolean collision(){
         return game.racquet.getBounds().intersects(getBounds());
+    }
+
+    private boolean collisionAI(){
+        return game.racquetAi.getBounds().intersects(getBounds());
     }
 
     //Function used to create the ball sprite
