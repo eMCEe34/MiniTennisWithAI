@@ -19,25 +19,23 @@ public class Ball {
     public int move(){
         //If the ball hits the left wall, bounce to the right
         if(x + xa < 0)
-            xa = game.speed;
+            xa = xa;
         //If the ball hits the right wall, bounce to the left
         else if(x + xa > game.getWidth() - DIAMETER)
-            xa = -game.speed;
+            xa = -xa;
         //If the ball hits the ceiling, bounce down
         else if(y + ya < 0)
-            ya = game.speed;
+            game.gameOver();
         //If the ball hits the floor, getting past the racquet, gameOver() is called
         else if(y + ya > game.getHeight() - DIAMETER)
             game.gameOver();
         //If the ball and racquet collide, bounce the ball back up and increase the ball speed
         else if(collision()){
-            ya = -game.speed;
+            ya = -ya;
             y = game.racquet.getTopY() - DIAMETER;
-            game.speed++;
         }else if(collisionAI()){
-            ya = game.speed;
-            y = game.racquetAi.getBottomY() - DIAMETER;
-            game.speed++;
+            ya = -ya;
+            y = game.racquetAi.getBottomY() + DIAMETER;
         }
         //Sets movement direction and speed of the ball
         x=x+xa;

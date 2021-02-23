@@ -10,6 +10,7 @@ public class Racquet {
     private static final int HEIGHT = 10;
     int x = 200;
     int xa = 0;
+    int score = 0;
     private Main game;
 
     //Constructor that sets the game variable here to our Main class
@@ -38,9 +39,9 @@ public class Racquet {
     //the left and right arrow keys are pressed
     public void keyPressed(KeyEvent e){
         if(e.getKeyCode() == KeyEvent.VK_LEFT)
-            xa = -game.speed;
+            xa = -1;
         if(e.getKeyCode() == KeyEvent.VK_RIGHT)
-            xa = game.speed;
+            xa = 1;
     }
 
     //Function used to set the boundaries of the racquet used for collision

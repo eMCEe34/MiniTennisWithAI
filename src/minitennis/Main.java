@@ -16,11 +16,12 @@ public class Main extends JPanel {
 	Racquet racquet = new Racquet(this);
 	//Creates racquetAi object
 	RacquetAI racquetAi = new RacquetAI(this);
-	int speed = 1;
+	//int speed = 1;
 
 	//Getter for speed and score (same value)
 	private int getScore(){
-		return speed - 1;
+		//return speed - 1;
+		return 0;
 	}
 
 	//Constructor that creates events for key presses
